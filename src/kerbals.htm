@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script src="kerbal_client_library.js"></script>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.png' />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <style>
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+  }
+
+  li {
+      float: left;
+  }
+
+  li a, .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  li a:hover, .dropdown:hover .dropbtn {
+      background-color: lightgreen;
+  }
+
+  li.dropdown {
+      display: inline-block;
+  }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+
+  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+  </style>
+
+
+  <title>KerbalView</title>
+
+
+  <script src="kerbal_client_library.js"></script>
+  <script src="kerbal_datamodel.js"></script>
+
+</head>
+
+<body>
+<div class="container-fluid">
+  <h1 class="shadow">KerbalView</h1>
+<ul>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Kerbals</a>
+    <div class="dropdown-content">
+	  <a href="http://uilennest.net/KerbalView/persistent.sfs">persistsent.sfs</a>
+      <a href="http://uilennest.net/myworkwiki/doku.php?id=kerbalview">About</a>
+    </div>
+  </li>
+</ul>
+<hr>
+
+<div w3-include-html="kerbal_html.htm"></div>
+<hr>
+
+<script>
+w3.includeHTML();
+</script>
+</div>
+</body>
+</html>
+
+
+

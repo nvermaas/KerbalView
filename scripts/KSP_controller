@@ -1,0 +1,14 @@
+#!/bin/bash
+# KSB_controller - Nico Vermaas - 19 aug 2017
+
+cd /home/nvermaas/www/KerbalView
+# link the dropbox folder to a local 'saves' folder to give the KerbalView app easier access 
+ln -s '/home/nvermaas/Dropbox/NicoMint/KerbalView/Nico Science 2017' saves
+
+# use node filesystem monitor to detect changes in the Kerbal data file (persistent.sfs). 
+# If changes are detected then
+# 1) copy the file to a local instance where the webserver can access it
+# 2) execute the kerbal_write_html.js (node) program to update the html. (the html is included in index.html). 
+nohup fsmonitor -d '/home/nvermaas/Dropbox/NicoMint/KerbalView/Nico Science 2017' -s -p '+persistent.sfs' sh -c "cp saves/persistent.sfs .;node kerbal_write_html.js" &
+
+
